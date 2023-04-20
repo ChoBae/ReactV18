@@ -1,7 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
 // import LoginWithMockAPI from "./pages/LoginWithMockAPI";
 import { routers } from "../router";
 import styled from "styled-components";
+import Home from "./pages/home";
+import UseTransition from "./pages/useTransition";
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
@@ -12,7 +14,11 @@ import styled from "styled-components";
 function App() {
   return (
     <HomeContainer>
-      <RouterProvider router={routers} />
+      <Routes>
+        <Route path="/" element={<Home></Home>} />
+        <Route path="/useTransition" element={<UseTransition></UseTransition>} />
+      </Routes>
+      {/* <RouterProvider router={routers} /> */}
     </HomeContainer>
   );
 }
