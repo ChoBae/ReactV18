@@ -1,4 +1,10 @@
-import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 // import LoginWithMockAPI from "./pages/LoginWithMockAPI";
 import { routers } from "../router";
 import styled from "styled-components";
@@ -14,10 +20,15 @@ import UseTransition from "./pages/useTransition";
 function App() {
   return (
     <HomeContainer>
-      <Routes>
-        <Route path="/" element={<Home></Home>} />
-        <Route path="/useTransition" element={<UseTransition></UseTransition>} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home></Home>} />
+          <Route
+            path="/useTransition"
+            element={<UseTransition></UseTransition>}
+          />
+        </Routes>
+      </BrowserRouter>
       {/* <RouterProvider router={routers} /> */}
     </HomeContainer>
   );
