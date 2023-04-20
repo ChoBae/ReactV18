@@ -13,18 +13,24 @@ interface RouterBase {
 const routerData: RouterBase[] = [
   {
     id: 0,
-    path: "/",
+    path: "/*",
     label: "Home",
     element: <Home />,
   },
   {
     id: 1,
+    path: "/",
+    label: "Home",
+    element: <Home />,
+  },
+  {
+    id: 2,
     path: "/useTransition",
     label: "리스트",
     element: <UseTransition />,
   },
   {
-    id: 2,
+    id: 3,
     path: "/error",
     label: "에러",
     element: <div>에러 페이지</div>,
